@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 400px;
+  border: 2px solid red;
+  display: flex;
+  /* flex-direction: column;
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column-reverse;
+   */
+  /* gap: 10px; */
+  /* row-gap: 10px; */
+  /* column-gap: 10px; */
+  /* flex-wrap: wrap; */
+  flex-flow: wrap row;
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  /* justify-content: flex-start; default property */
+  /* justify-content: flex-end; */
+  justify-content: center;
+
+  /* for cross asix */
+  /* align-items: stretch;  default property because of this by default items are stretched to full length */
+  align-items: center;
+  /* items can be centered to vertical axis */
+  /* align-items: flex-start; */
+  /* align items at the start of the container on Y axis */
+  /* align-items: flex-end; */
+  /* align items at the end of the container on Y axis */
+  /* align-content: flex-evenly; */
+
+  /* 
+  align-items will control the alignment along the cross axis of every flexbox line individually
+  align-content will control the alignment of all line together
+  */
+}
+
+/* Properties for child */
+/* 
+order
+flex-grow: 0; by default property
+flex-shrink: 1; by default
+flex-basis define initial width in the direction of main axis, if axis changed then it will set initial height
+flex   shortend property for flex-grow, flex-shrink and flex-basis
+align-self --->children align self on the cross axis
+*/
+.box {
+  border: 2px solid green;
+  /* flex-basis: 25%; */
+  width: 80px;
+}
+#box-1 {
+  /* order: 1;
+  flex-grow: 1;
+  flex-shrink: 2; */
+}
+#box-3 {
+  /* order: 2;
+  flex-grow: 2; */
+  flex: 0 0 200px;
+  /* no grow, no shrink always contains 200px width; */
+  align-self: flex-end;
+}
+#box-4 {
+  /* flex-shrink: 3; */
+}
